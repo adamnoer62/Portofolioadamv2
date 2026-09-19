@@ -1,0 +1,73 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.navbar.scrolled {
+  border-bottom: 2px solid var(--ink);
+  box-shadow: 0 4px 0 var(--ink);
+}
+.navbarInner {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  transition: height 0.25s ease;
+}
+.navbar.scrolled .navbarInner {
+  height: 72px;
+}
+.wordmark {
+  font-size: 25px;
+  font-weight: 750;
+  letter-spacing: -1.4px;
+}
+.wordmark span {
+  display: inline-block;
+  vertical-align: top;
+  margin: 3px 0 0 3px;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-underline-offset: 6px;
+}
+.link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--accent);
+}
+@media (max-width: 700px) {
+  .navbarInner {
+    height: 80px;
+    gap: 16px;
+  }
+  .navbar.scrolled .navbarInner {
+    height: 64px;
+  }
+  .wordmark {
+    font-size: 22px;
+  }
+  .link {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbarInner {
+    transition: none;
+  }
+}

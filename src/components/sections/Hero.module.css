@@ -1,0 +1,124 @@
+.hero {
+  padding-top: 64px;
+}
+.intro {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+}
+.index {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.headline {
+  font-size: clamp(2.6rem, 9.5vw, 8.7rem);
+  font-weight: 650;
+  letter-spacing: -0.07em;
+  line-height: 1.03;
+  margin: 48px 0;
+  animation: none !important;
+}
+.headline > span {
+  display: block;
+}
+.period {
+  color: var(--ink);
+}
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+}
+.description {
+  max-width: 380px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  background: var(--accent);
+  padding: 20px 24px;
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  box-shadow: 8px 8px 0 var(--ink);
+  font-weight: 650;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  transition:
+    transform 0.18s,
+    box-shadow 0.18s;
+}
+.cta:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.cta:active {
+  transform: translate(7px, 7px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+.caption {
+  margin-top: 80px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+@media (max-width: 700px) {
+  .hero {
+    padding-top: 40px;
+  }
+  .intro {
+    font-size: 11px;
+  }
+  .index {
+    font-size: 8px;
+  }
+  .headline {
+    margin: 40px 0 32px;
+  }
+  .bottom {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .description {
+    font-size: 16px;
+    max-width: 310px;
+  }
+  .cta {
+    width: fit-content;
+    padding: 16px 20px;
+    font-size: 12px;
+  }
+  .caption {
+    margin-top: 56px;
+    font-size: 8px;
+    line-height: 1.6;
+  }
+  .caption > span:first-child {
+    max-width: 180px;
+  }
+  .caption > span:last-child {
+    max-width: 90px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta {
+    transition: none;
+  }
+  .cta:hover,
+  .cta:active {
+    transform: none;
+  }
+}
